@@ -7,10 +7,12 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: #121212; 
+    color: #f0f0f0; 
 }
 
 header {
-    background: #333;
+    background: rgba(33, 33, 33, 0.8); 
     color: #fff;
     padding: 1rem 0;
     position: fixed;
@@ -31,23 +33,57 @@ nav .logo {
     font-size: 1.5rem;
 }
 
-nav ul {
+nav .nav-links, nav .social-links {
     list-style: none;
     display: flex;
 }
 
-nav ul li {
-    margin-left: 1.5rem;
+nav .nav-links {
+    justify-content: center;
+    flex: 1;
 }
 
-nav ul li a {
+nav .nav-links li {
+    margin: 0 1.5rem;
+}
+
+nav .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
 
-nav ul li a:hover {
+nav .nav-links li a:hover {
     color: #ddd;
+}
+
+nav .social-links li {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav .social-links li a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav .social-links li a .resume-link {
+    font-size: 1rem; 
+    margin-left: 0.5rem;
+}
+
+nav .social-links li a:hover {
+    color: #ddd;
+}
+
+nav .vertical-bar {
+    border-left: 1px solid #fff; 
+    height: 20px;
+    margin: 0 10px;
 }
 
 #hero {
@@ -71,7 +107,8 @@ nav ul li a:hover {
 
 .section {
     padding: 4rem 0;
-    background: #f4f4f4;
+    background: #1e1e1e; 
+    color: #f0f0f0; 
 }
 
 .container {
@@ -93,23 +130,25 @@ h2 {
 }
 
 .project, .skill {
-    background: #fff;
+    background: #2c2c2c; 
+    color: #f0f0f0;
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     flex: 1;
     min-width: 300px;
 }
 
 .skill i {
     font-size: 2rem;
-    color: #333;
+    color: #ffeb3b; 
     margin-bottom: 1rem;
 }
 
 form {
-    background: #fff;
+    background: #2c2c2c; 
+    color: #f0f0f0; 
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     margin: auto;
 }
@@ -125,6 +164,8 @@ form input, form textarea {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #333; 
+    color: #f0f0f0; 
 }
 
 form button {
@@ -166,12 +207,12 @@ footer .social-icons a:hover {
 /* Media Queries */
 
 @media (max-width: 768px) {
-    nav ul {
+    nav .nav-links {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
+    nav .nav-links li {
         margin: 0.5rem 0;
     }
 
