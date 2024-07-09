@@ -33,9 +33,18 @@ document.querySelectorAll('input[type="radio"]').forEach((radio, index) => {
     radio.addEventListener('change', () => manualSlide(index + 1));
 });
 
-// Add click event listeners to slides to manually select slides
+// Add click event listeners to each slide
 document.querySelectorAll('.slide').forEach((slide, index) => {
-    slide.addEventListener('click', () => manualSlide(index + 1));
+    slide.addEventListener('click', () => {
+        // Check if the clicked slide is the main (active) slide
+        if (document.getElementById(`s${index + 1}`).checked) {
+            // Open the GitHub repository URL if it's the main slide
+            openRepo(slide.getAttribute('data-repo-url'));
+        } else {
+            // Otherwise, make the clicked slide the main slide
+            manualSlide(index + 1);
+        }
+    });
 });
 
 // Function to toggle the navigation menu
@@ -75,3 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Function to open the GitHub repository
+function openRepo(url) {
+    window.open(url, '_blank'); // Open the URL in a new tab
+}
