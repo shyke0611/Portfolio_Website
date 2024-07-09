@@ -1,18 +1,21 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* general styles for the body */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #121212; 
-    color: #f0f0f0; 
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
+/* Header Section */
 header {
-    background: rgba(33, 33, 33, 0.8); 
+    background: rgba(33, 33, 33, 0.8);
     color: #fff;
     padding: 1rem 0;
     position: fixed;
@@ -21,6 +24,11 @@ header {
     z-index: 1000;
 }
 
+
+/* Navigation Section */
+
+
+/* Main navigation styles */
 nav {
     display: flex;
     justify-content: space-between;
@@ -29,40 +37,61 @@ nav {
     margin: auto;
 }
 
-nav .logo {
-    font-size: 1.5rem;
+/* Styles for the menu icon */
+nav .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
 }
 
-nav .nav-links, nav .social-links {
+/* Navigation links and social links styles */
+nav .nav-links,
+nav .social-links {
     list-style: none;
     display: flex;
 }
 
+/* Navigation links container */
 nav .nav-links {
-    justify-content: center;
+    justify-content: flex-end;
     flex: 1;
 }
 
+/* Individual navigation link */
 nav .nav-links li {
     margin: 0 1.5rem;
 }
 
+/* Navigation link styling */
 nav .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
 
+/* Hover effect for navigation links */
 nav .nav-links li a:hover {
     color: #ddd;
 }
 
+/* Social links container */
+nav .social-links {
+    justify-content: flex-start;
+    flex: 1;
+}
+
+/* Individual social link */
 nav .social-links li {
     margin-left: 1rem;
     display: flex;
     align-items: center;
 }
 
+/* Social link styling */
 nav .social-links li a {
     color: #fff;
     font-size: 1.5rem;
@@ -71,22 +100,73 @@ nav .social-links li a {
     text-decoration: none;
 }
 
-nav .social-links li a .resume-link {
-    font-size: 1rem; 
-    margin-left: 0.5rem;
+/* Resume link specific styling */
+nav .social-links li a.resume-link {
+    font-size: 1rem;
 }
 
+/* Hover effect for social links */
 nav .social-links li a:hover {
     color: #ddd;
 }
 
+/* Vertical bar between social links and resume link */
 nav .vertical-bar {
-    border-left: 1px solid #fff; 
+    border-left: 1px solid #fff;
     height: 20px;
     margin: 0 10px;
 }
 
-#hero {
+
+/* Responsive Navigation Menu */
+
+
+/* Responsive styles for menu icon */
+@media (max-width: 768px) {
+    nav .menu-icon {
+        display: block;
+    }
+
+    /* Responsive styles for navigation links */
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        text-align: left;
+        background-color: rgba(33, 33, 33, 0.9);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        justify-content: center;
+        padding-top: 60px;
+    }
+
+    /* Responsive styles for navigation list items */
+    nav .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    /* Styles to show navigation links when active */
+    nav .nav-links.show {
+        display: flex;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Intro Section */
+
+
+/* Styles for the intro */
+#intro {
     background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -96,93 +176,43 @@ nav .vertical-bar {
     text-align: center;
 }
 
-.hero-content h1 {
+/* Styles for the intro heading 3*/
+.intro-content h3 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.hero-content p {
+
+/* Styles for the intro paragraph */
+.intro-content p {
     font-size: 1.2rem;
 }
 
+
+/* General Section Styles */
+
+
+/* Styles for sections */
 .section {
     padding: 4rem 0;
-    background: #1e1e1e; 
-    color: #f0f0f0; 
+    background: #1e1e1e;
+    color: #f0f0f0;
 }
 
+/* Container styles */
 .container {
     width: 90%;
     margin: auto;
     max-width: 1200px;
 }
 
+/* Styles for section headings */
 h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.projects-grid, .skills-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.project, .skill {
-    background: #2c2c2c; 
-    color: #f0f0f0;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    flex: 1;
-    min-width: 300px;
-}
-
-.skill i {
-    font-size: 2rem;
-    color: #ffeb3b; 
-    margin-bottom: 1rem;
-}
-
-form {
-    background: #2c2c2c; 
-    color: #f0f0f0; 
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    margin: auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #333; 
-    color: #f0f0f0; 
-}
-
-form button {
-    display: block;
-    width: 100%;
-    padding: 0.7rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #555;
-}
-
+/* Footer Section */
 footer {
     background: #333;
     color: #fff;
@@ -190,45 +220,19 @@ footer {
     padding: 1rem 0;
 }
 
+/* Social icons in the footer */
 footer .social-icons {
     margin-top: 1rem;
 }
 
+/* Individual social icon link in the footer */
 footer .social-icons a {
     color: #fff;
     margin: 0 0.5rem;
     font-size: 1.5rem;
 }
 
+/* Hover effect for social icon links in the footer */
 footer .social-icons a:hover {
     color: #ddd;
-}
-
-/* Media Queries */
-
-@media (max-width: 768px) {
-    nav .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .projects-grid, .skills-grid {
-        flex-direction: column;
-    }
-
-    .project, .skill {
-        min-width: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
 }

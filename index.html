@@ -1,111 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- Linking CSS files for styling -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- The navigation section at the top -->
+    <!-- Header Section with Navigation -->
     <header>
         <nav>
-            <div class="logo">
-                <h1>Andrew</h1>
-            </div>
-            <!-- navigation links -->
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <!-- social media links and resume link inside the nav bar -->
+            <!-- social links and resume -->
             <ul class="social-links">
                 <li><a href="https://github.com/shyke0611" target="_blank"><i class="fa fa-github"></i></a></li>
                 <li><a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><span class="vertical-bar"></span></li>
-                <li><a href="AndrewShin_InternshipCV.pdf" target="_blank"><span class="resume-link">Resume</span></a></li>
+                <li><a class="resume-link" href="assets/AndrewShin_InternshipCV.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <!-- responsive design for when resolution is too small -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- navigation links to navigate to different sections -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I am a software engineer with a passion for developing innovative programs.</p>
+    <!-- Introduction Section -->
+    <section id="intro">
+        <div class="intro-content">
+            <h3>Welcome, I'm Andrew Shin</h3>
+            <p>Software engineer based in New Zealand with a passion for developing innovative programs.</p>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm a software engineer with experience</p>
-        </div>
-    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="carousel">
+            <!-- Radio inputs for slider control -->
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Project One</h3>
-                    <p>A description of the project</p>
+            <!-- Project Slides -->
+            <div class="slides">
+                <!-- project 1 -->
+                <div class="slide" id="slide1" onclick="manualSlide(1)">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <!-- number of collaborators for the project -->
+                        <div class="collaborators"><i class="fa fa-user"></i> 3</div>
+                        <!-- coding language used for the project -->
+                        <div class="languages">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
+                        </div>
+                        <!-- project title -->
+                        <h3>EscAIpe Room Game</h3>
+                        <!-- project description -->
+                        <p>Utilised OpenAI API to create an AI GameMaster for Client 'Brain-E-Riddlers'</p>
+                        <div class="read-more">Read more</div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Project Two</h3>
-                    <p>A description of the project</p>
+                <!-- project 2-->
+                <div class="slide" id="slide2" onclick="manualSlide(2)">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <div class="collaborators"><i class="fa fa-user"></i> 1</div>
+                        <div class="languages">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
+                            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="language-logo">
+                        </div>
+                        <h3>Car Rental Management and Booking</h3>
+                        <p>ACID properties, Transaction Management</p>
+                        <div class="read-more">Read more</div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Project Three</h3>
-                    <p>A description of the project</p>
+                <!-- project 3-->
+                <div class="slide" id="slide3" onclick="manualSlide(3)">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <div class="collaborators"><i class="fa fa-user"></i> 1</div>
+                        <div class="languages">
+                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
+                            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" class="language-logo">
+                        </div>
+                        <h3>High Fidelity Prototype</h3>
+                        <p>UX/UI Design for Client 'FreeCycling!'</p>
+                        <div class="read-more">Read more</div>
+                    </div>
+                </div>
+                <!-- project 4-->
+                <div class="slide" id="slide4" onclick="manualSlide(4)">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <div class="collaborators"><i class="fa fa-user"></i> 1</div>
+                        <div class="languages">
+                            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="language-logo">
+                        </div>
+                        <h3>Coin Detection Pipeline</h3>
+                        <p>Image processing</p>
+                        <div class="read-more">Read more</div>
+                    </div>
+                </div>
+                <!-- project 5-->
+                <div class="slide" id="slide5" onclick="manualSlide(5)">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <div class="collaborators"><i class="fa fa-user"></i> 1</div>
+                        <div class="languages">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
+                        </div>
+                        <h3>Test Coverage</h3>
+                        <p></p>
+                        <div class="read-more">Read more</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <i class="fa fa-code"></i>
-                    <h3>Programming</h3>
-                    <p>JavaScript, Python, Java, C++</p>
-                </div>
-                <div class="skill">
-                    <i class="fa fa-database"></i>
-                    <h3>Database</h3>
-                    <p>MySQL, MongoDB, PostgreSQL</p>
-                </div>
-                <div class="skill">
-                    <i class="fa fa-cloud"></i>
-                    <h3>Cloud</h3>
-                    <p>AWS, Azure, Google Cloud</p>
-                </div>
-            </div>
+        <!-- navigation arrows for the projects -->
+        <div class="navigation">
+            <button class="nav-arrow prev" onclick="prevSlide()">&#10094;</button>
+            <label for="s1" class="nav-btn"></label>
+            <label for="s2" class="nav-btn"></label>
+            <label for="s3" class="nav-btn"></label>
+            <label for="s4" class="nav-btn"></label>
+            <label for="s5" class="nav-btn"></label>
+            <button class="nav-arrow next" onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
         <div class="social-icons">
@@ -114,6 +149,8 @@
             <a href="#"><i class="fa fa-twitter"></i></a>
         </div>
     </footer>
-</body>
 
+    <!-- Linking JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
 </html>
