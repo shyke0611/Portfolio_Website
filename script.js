@@ -6,6 +6,7 @@ function nextSlide() {
     currentSlide = (currentSlide % totalSlides) + 1; // Calculate the next slide number
     setTimeout(() => {
         document.getElementById(`s${currentSlide}`).checked = true; // Select the next slide
+        updateNavButtons(); // Update navigation buttons
     }, 0);
     resetAutoSlide(); // Reset the auto-slide timer
 }
@@ -15,6 +16,7 @@ function prevSlide() {
     currentSlide = (currentSlide - 2 + totalSlides) % totalSlides + 1; // Calculate the previous slide number
     setTimeout(() => {
         document.getElementById(`s${currentSlide}`).checked = true; // Select the previous slide
+        updateNavButtons();
     }, 0);
     resetAutoSlide();
 }
@@ -24,6 +26,7 @@ function manualSlide(slideNumber) {
     currentSlide = slideNumber; // Set the current slide number to the selected slide
     setTimeout(() => {
         document.getElementById(`s${currentSlide}`).checked = true; // Select the slide
+        updateNavButtons()
     }, 0);
     resetAutoSlide(); 
 }
@@ -45,6 +48,16 @@ document.querySelectorAll('.slide').forEach((slide, index) => {
             manualSlide(index + 1);
         }
     });
+
+    // Pause auto rotate when hover
+    slide.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+
+    // Resume auto rotate when not hover
+    slide.addEventListener('mouseleave', () => {
+        resetAutoSlide(); 
+    });
 });
 
 // Function to toggle the navigation menu
@@ -56,11 +69,30 @@ function toggleMenu() {
 // Function to reset the auto-slide timer
 function resetAutoSlide() {
     clearInterval(autoSlide); // Clear the existing interval
-    autoSlide = setInterval(nextSlide, 5000); // Start a new interval
+    autoSlide = setInterval(nextSlide, 3000); // Start a new interval
 }
 
 // Initialize auto-slide functionality
-let autoSlide = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+let autoSlide = setInterval(nextSlide, 3000); // Auto-slide every 5 seconds
+
+// Function to update navigation buttons
+function updateNavButtons() {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach((btn, index) => {
+        if (index + 1 === currentSlide) {
+            btn.style.background = '#333';
+            btn.style.border = '2px solid #fff';
+            btn.style.transform = 'scale(1.2)';
+        } else {
+            btn.style.background = '#ddd';
+            btn.style.border = 'none';
+            btn.style.transform = 'scale(1)';
+        }
+    });
+}
+
+// Call updateNavButtons on initial load
+updateNavButtons();
 
 // Add event listeners for slide hover effects
 document.addEventListener('DOMContentLoaded', () => {

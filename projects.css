@@ -192,22 +192,11 @@ input[type="radio"] {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: transform 0.3s;
 }
 
 /* Hover effect for navigation buttons */
 .nav-btn:hover {
-    background: #333;
-    border: 2px solid #fff;
-    transform: scale(1.2);
-}
-
-/* Checked navigation button styles */
-input[type="radio"]#s1:checked ~ .navigation label[for="s1"],
-input[type="radio"]#s2:checked ~ .navigation label[for="s2"],
-input[type="radio"]#s3:checked ~ .navigation label[for="s3"],
-input[type="radio"]#s4:checked ~ .navigation label[for="s4"],
-input[type="radio"]#s5:checked ~ .navigation label[for="s5"] {
     background: #333;
     border: 2px solid #fff;
     transform: scale(1.2);
@@ -224,7 +213,7 @@ input[type="radio"]#s5:checked ~ .navigation label[for="s5"] {
     margin: 0 10px;
     border-radius: 50%;
     z-index: 10;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s;
 }
 
 /* Hover effect for navigation arrows */
