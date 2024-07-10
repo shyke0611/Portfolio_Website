@@ -129,6 +129,8 @@ function showLoading() {
 
 // sliding animation for each section
 
+// attribution: https://www.youtube.com/watch?v=T33NN_pPeNI 
+
 document.addEventListener('DOMContentLoaded', () => {
     // define options for the Intersection Observer
     const observerOptions = {
