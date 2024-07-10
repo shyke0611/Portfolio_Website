@@ -126,3 +126,39 @@ function openRepo(url) {
 function showLoading() {
     document.body.classList.add('loading'); 
 }
+
+// sliding animation for each section
+
+// attribution: https://www.youtube.com/watch?v=T33NN_pPeNI 
+
+document.addEventListener('DOMContentLoaded', () => {
+    // define options for the Intersection Observer
+    const observerOptions = {
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // callback function when intersection event occurs
+    const callback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // add show when the element is in view
+                entry.target.classList.add('show');
+            } else {
+                // remove show class when the element is out of view
+                entry.target.classList.remove('show');
+            }
+        });
+    };
+
+    // intersection observer instance with the callback function and options
+    const observer = new IntersectionObserver(callback, observerOptions);
+
+    // select all elements with the hidden class
+    const elementsToObserve = document.querySelectorAll('.hidden');
+
+    // observe each selected element
+    elementsToObserve.forEach(element => observer.observe(element));
+});
+
+
+
