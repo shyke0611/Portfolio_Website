@@ -28,6 +28,7 @@
             <!-- navigation links to navigate to different sections -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +37,7 @@
     <section id="intro">
         <div class="intro-content">
             <h3>Welcome, I'm Andrew Shin</h3>
-            <p>Software engineer based in New Zealand with a passion for developing innovative programs.</p>
+            <p>Penultimate Year Software Engineer based in Auckland New Zealand with a passion for developing innovative programs.</p>
         </div>
     </section>
 
@@ -142,14 +143,46 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <!-- https://formsubmit.co/ used this website for emailing handling-->
+        <form action="https://formsubmit.co/dfced80b395f279cd2a7f80d10c30929" method="POST" id="contact-form" onsubmit="showLoading()">
+            <!-- user name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- user email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- user message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- disable captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- This value is used for the email's subject, so that you can quickly reply to submissions without having to edit the subject line each time. -->
+            <input type="hidden" name="_subject" value="New submission!">
+            <!-- Reply-To field for the email -->
+            <input type="hidden" name="_replyto" value="email">
+
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <!-- Footer Section -->
-    <footer>
+<footer>
+    <div class="footer-content">
         <p>&copy; 2024 Andrew Shin</p>
         <div class="social-icons">
             <a href="https://github.com/shyke0611" target="_blank"><i class="fa fa-github"></i></a>
             <a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i class="fa fa-linkedin"></i></a>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
     <!-- Linking JavaScript file for functionality -->
     <script src="script.js"></script>
