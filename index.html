@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <!-- Linking CSS files for styling -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="projects.css">
+    <!-- Include Normalize.css to reset default browser styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header Section with Navigation -->
     <header>
@@ -17,7 +21,8 @@
             <!-- social links and resume -->
             <ul class="social-links">
                 <li><a href="https://github.com/shyke0611" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i
+                            class="fa fa-linkedin"></i></a></li>
                 <li><span class="vertical-bar"></span></li>
                 <li><a class="resume-link" href="assets/AndrewShin_InternshipCV.pdf" target="_blank">Resume</a></li>
             </ul>
@@ -37,15 +42,16 @@
     <!-- Introduction Section -->
     <section id="intro">
         <div class="intro-content">
-            <h3>Welcome, I'm Andrew Shin</h3>
-            <p>Penultimate Year Software Engineer based in Auckland New Zealand with a passion for developing innovative programs.</p>
+            <h3 class="hidden">Welcome, I'm Andrew Shin</h3>
+            <p class="hidden">Penultimate Year Software Engineer based in Auckland New Zealand with a passion for
+                developing innovative programs.</p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-         <!-- Project Heading -->
-         <h1>Projects</h1>
+    <section id="projects" class="hidden">
+        <!-- Project Heading -->
+        <h1>Projects</h1>
         <div class="carousel">
             <!-- Radio inputs for slider control -->
             <input type="radio" name="slider" id="s1" checked>
@@ -57,15 +63,17 @@
             <!-- Project Slides -->
             <div class="slides">
                 <!-- project 1 -->
-                <div class="slide" id="slide1" data-repo-url="https://github.com/shyke0611/EscAIpe-Room-Game">
+                <div class="slide hidden" id="slide1" data-repo-url="https://github.com/shyke0611/EscAIpe-Room-Game">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <!-- number of collaborators for the project -->
                         <div class="collaborators"><i class="fa fa-user"></i> 3</div>
                         <!-- coding language used for the project -->
                         <div class="languages">
-                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
-                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+                                alt="Java" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                                alt="CSS" class="language-logo">
                         </div>
                         <!-- project title -->
                         <h3>EscAIpe Room Game</h3>
@@ -75,14 +83,17 @@
                     </div>
                 </div>
                 <!-- project 2-->
-                <div class="slide" id="slide2" data-repo-url="https://github.com/shyke0611/Car_Rental_Project">
+                <div class="slide hidden" id="slide2" data-repo-url="https://github.com/shyke0611/Car_Rental_Project">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <div class="collaborators"><i class="fa fa-user"></i> 1</div>
                         <div class="languages">
-                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
-                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
-                            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="language-logo">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+                                alt="Java" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                                alt="CSS" class="language-logo">
+                            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+                                alt="MySQL" class="language-logo">
                         </div>
                         <h3>Car Rental Management and Booking</h3>
                         <p>ACID properties, Transaction Management</p>
@@ -90,14 +101,18 @@
                     </div>
                 </div>
                 <!-- project 3-->
-                <div class="slide" id="slide3" data-repo-url="https://github.com/shyke0611/UX-Design-High-Fidelity-Prototype">
+                <div class="slide hidden" id="slide3"
+                    data-repo-url="https://github.com/shyke0611/UX-Design-High-Fidelity-Prototype">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <div class="collaborators"><i class="fa fa-user"></i> 1</div>
                         <div class="languages">
-                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" class="language-logo">
-                            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" class="language-logo">
-                            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" class="language-logo">
+                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                                alt="HTML" class="language-logo">
+                            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                                alt="CSS" class="language-logo">
+                            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                                alt="JavaScript" class="language-logo">
                         </div>
                         <h3>High Fidelity Prototype</h3>
                         <p>UX/UI Design for Client 'FreeCycling!'</p>
@@ -105,12 +120,14 @@
                     </div>
                 </div>
                 <!-- project 4-->
-                <div class="slide" id="slide4" data-repo-url="https://github.com/shyke0611/Coin_Detection_Pipeline">
+                <div class="slide hidden" id="slide4"
+                    data-repo-url="https://github.com/shyke0611/Coin_Detection_Pipeline">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <div class="collaborators"><i class="fa fa-user"></i> 1</div>
                         <div class="languages">
-                            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="language-logo">
+                            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+                                alt="Python" class="language-logo">
                         </div>
                         <h3>Coin Detection Pipeline</h3>
                         <p>Image processing</p>
@@ -118,12 +135,13 @@
                     </div>
                 </div>
                 <!-- project 5-->
-                <div class="slide" id="slide5" data-repo-url="https://github.com/shyke0611/project5">
+                <div class="slide hidden" id="slide5" data-repo-url="https://github.com/shyke0611/project5">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <div class="collaborators"><i class="fa fa-user"></i> 1</div>
                         <div class="languages">
-                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" class="language-logo">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+                                alt="Java" class="language-logo">
                         </div>
                         <h3>Test Coverage</h3>
                         <p></p>
@@ -145,10 +163,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="hidden">
         <h1>Contact Me</h1>
         <!-- https://formsubmit.co/ used this website for emailing handling-->
-        <form action="https://formsubmit.co/dfced80b395f279cd2a7f80d10c30929" method="POST" id="contact-form" onsubmit="showLoading()">
+        <form action="https://formsubmit.co/dfced80b395f279cd2a7f80d10c30929" method="POST" id="contact-form"
+            onsubmit="showLoading()">
             <!-- user name -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -174,18 +193,19 @@
     </section>
 
     <!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Andrew Shin</p>
-        <div class="social-icons">
-            <a href="https://github.com/shyke0611" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Andrew Shin</p>
+            <div class="social-icons">
+                <a href="https://github.com/shyke0611" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/andrew-hk-shin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <!-- Linking JavaScript file for functionality -->
     <script src="script.js"></script>
 </body>
+
 </html>

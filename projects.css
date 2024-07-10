@@ -2,22 +2,22 @@
 
 /* Projects Section */
 #projects {
-    padding-top: 80px; 
+    padding-top: 8vh; 
 }
 
 #projects h1 {
-    margin-bottom: -80px; 
+    margin-bottom: -8vh; 
     text-align: center; 
     color: #fff; 
-    font-size: 40px;
+    font-size: 4vh;
 }
 
 /* whole Carousel container */
 .carousel {
     position: relative;
-    width: 90%;
-    height: 460px;
-    margin: 100px auto 70px auto; 
+    width: 170vh;
+    height: 55vh;
+    margin: 10vh auto 7vh auto; 
     perspective: 1000px;
     transform-style: preserve-3d;
 }
@@ -45,17 +45,17 @@ input[type="radio"] {
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align text to top */
+    justify-content: flex-start; 
     align-items: center;
     backface-visibility: hidden;
     background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 1vh;
     overflow: hidden;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     cursor: pointer;
-    padding: 20px; /* Add padding */
+    padding: 2vh 
 }
 
 /* Overlay for slide background image */
@@ -97,7 +97,7 @@ input[type="radio"] {
     pointer-events: none;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 2vh;
     box-sizing: border-box;
 }
 
@@ -106,27 +106,27 @@ input[type="radio"] {
 .slide-content p {
     color: white;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 1vh 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 /* Styles for slide title */
 .slide-content h3 {
-    margin-top: 60px; 
-    font-size: 1.5em;
+    margin-top: 50px; 
+    font-size: 2vw; 
 }
 
 /* Styles for slide description */
 .slide-content p {
     margin-top: 10px; 
-    font-size: 1em;
+    font-size: 1vw;
 }
 
 /* Animation for Read More */
 .read-more {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 1vh;
+    left: 1vh;
     color: white;
     font-weight: bold;
     opacity: 0;
@@ -138,7 +138,7 @@ input[type="radio"] {
 .collaborators,
 .languages {
     position: absolute;
-    font-size: 1rem;
+    font-size: 1vw; 
     color: #fff;
     display: flex;
     align-items: center;
@@ -146,19 +146,19 @@ input[type="radio"] {
 
 /* Position of collaborators info */
 .collaborators {
-    top: 10px;
-    left: 10px;
+    top: 1vh;
+    left: 1vh;
 }
 
 /* Position of languages info */
 .languages {
-    top: 10px;
-    right: 10px;
+    top: 1vh;
+    right: 1vh;
 }
 
 /* Icon for collaborators info */
 .collaborators i {
-    margin-right: 5px;
+    margin-right: 0.5vh;
 }
 
 /* Language logo container */
@@ -168,10 +168,9 @@ input[type="radio"] {
 
 /* Language logo styles */
 .language-logo {
-    width: 50px;
-    height: 20px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
+    width: auto;
+    height: 3vh;
+    margin-right: 1vh;
 }
 
 /* Navigation container */
@@ -180,17 +179,17 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: -70px;
-    margin-bottom: 200px;
+    margin-top: -7vh;
+    margin-bottom: 20vh;
 }
 
 /* Navigation button styles */
 .nav-btn {
-    width: 12px;
-    height: 12px;
+    width: 1.2vh;
+    height: 1.2vh;
     background: #ddd;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 0.5vh;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -198,7 +197,7 @@ input[type="radio"] {
 /* Hover effect for navigation buttons */
 .nav-btn:hover {
     background: #333;
-    border: 2px solid #fff;
+    border: 0.2vh solid #fff;
     transform: scale(1.2);
 }
 
@@ -210,7 +209,7 @@ input[type="radio"] {
     font-size: 2rem;
     cursor: pointer;
     padding: 1rem;
-    margin: 0 10px;
+    margin: 0 1vh;
     border-radius: 50%;
     z-index: 10;
     transition: transform 0.3s;
