@@ -121,3 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function openRepo(url) {
     window.open(url, '_blank'); // Open the URL in a new tab
 }
+
+// Function to show the loading for when user submits form
+function showLoading() {
+    document.body.classList.add('loading'); 
+}
