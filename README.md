@@ -40,8 +40,8 @@ One of the significant challenges I encountered was getting the animations right
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-*[YouTube Channel: Beyond Fireship | Youtube Video: Subtle, yet Beautiful Scroll Animations](https://www.youtube.com/watch?v=T33NN_pPeNI)
-*[YouTube Channel: M -softTech | Youtube Video: Responsive 3D Image Slider](https://www.youtube.com/watch?app=desktop&v=HEJsHNWPF74)
+* [YouTube Channel: Beyond Fireship | Youtube Video: Subtle, yet Beautiful Scroll Animations](https://www.youtube.com/watch?v=T33NN_pPeNI)
+* [YouTube Channel: M -softTech | Youtube Video: Responsive 3D Image Slider](https://www.youtube.com/watch?app=desktop&v=HEJsHNWPF74)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
